@@ -14,5 +14,17 @@ spring:
         ddl-auto: update
      database: mysql
      database-platform: org.hibernate.dialect.MySQLDialect
-
-
+  security:
+    jwt:
+      secret-key: ${JWT_SECRET}
+      expiration: 86400000
+      refresh-token:
+        expiration: 604800000
+logging:
+  pattern:
+    console: "%d{HH:mm:ss} %-5level [%logger{36}] - %msg%n"
+  level:
+    com.nimbusds: TRACE
+    org.springframework.security.oauth2.jwt: TRACE
+    org.springframework.security.oauth2: TRACE
+    org.springframework.security: DEBUG

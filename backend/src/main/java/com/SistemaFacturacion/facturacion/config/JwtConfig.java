@@ -1,8 +1,6 @@
 package com.SistemaFacturacion.facturacion.config;
 
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
-import com.nimbusds.jose.jwk.source.JWKSource;
-import com.nimbusds.jose.proc.SecurityContext;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +12,7 @@ import org.springframework.security.oauth2.jwt.NimbusJwtEncoder;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 
 @Configuration
 public class JwtConfig {
@@ -22,18 +20,24 @@ public class JwtConfig {
     @Value("${JWT_SECRET}")
     private String jwtSecret;
 
+    private static final String HMAC_ALG = "HmacSHA256";
+
     @Bean
     public JwtEncoder jwtEncoder() {
-        byte[] secretBytes = jwtSecret.getBytes(StandardCharsets.UTF_8);
-        SecretKey key = new SecretKeySpec(secretBytes, "HmacSHA256");
-        JWKSource<SecurityContext> jwkSource = new ImmutableSecret<>(key);
-        return new NimbusJwtEncoder(jwkSource);
+        byte[] secretBytes = Base64.getDecoder().decode(jwtSecret);
+        System.out.println("Encoder - Secret bytes length -> " + secretBytes.length); // debe ser 32
+        SecretKey key = new SecretKeySpec(secretBytes, HMAC_ALG);
+        return new NimbusJwtEncoder(new ImmutableSecret<>(key));
     }
 
     @Bean
     public JwtDecoder jwtDecoder() {
-        byte[] secretBytes = jwtSecret.getBytes(java.nio.charset.StandardCharsets.UTF_8);
-        SecretKey key = new SecretKeySpec(secretBytes, "HmacSHA256");
+        byte[] secretBytes = Base64.getDecoder().decode(jwtSecret);
+        System.out.println("Decoder - Secret bytes length -> " + secretBytes.length); // debe ser 32
+        SecretKey key = new SecretKeySpec(secretBytes, HMAC_ALG);
         return NimbusJwtDecoder.withSecretKey(key).macAlgorithm(MacAlgorithm.HS256).build();
     }
+
+
+
 }

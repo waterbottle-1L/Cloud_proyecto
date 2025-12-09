@@ -36,8 +36,9 @@ public class ClienteService {
     }
 
     public Page<ClienteSummaryDTO> findAll(Pageable pageable){
-        return clienteRepository.findAll(pageable).map(cliente -> new ClienteSummaryDTO(cliente));
+        return clienteRepository.findAll(pageable).map(ClienteSummaryDTO::new);
     }
+
 
     public ClienteSummaryDTO findById(Long id){
         Cliente cliente = clienteRepository.findById(id).orElseThrow(()-> new EntityNotFoundException(
