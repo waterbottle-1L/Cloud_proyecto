@@ -1,0 +1,8 @@
+/* Opcional: estilos para la tabla */
+table {
+  width: 100%;
+}
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
+}

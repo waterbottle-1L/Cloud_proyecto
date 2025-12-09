@@ -1,0 +1,48 @@
+<div class="container-fluid px-4">
+  <h1 class="mt-4">Dashboard</h1>
+
+  <!-- Cards -->
+  <div class="row">
+    <div class="col-xl-3 col-md-6" *ngFor="let card of cards">
+      <div class="card text-white mb-4" [ngClass]="card.bgClass">
+        <div class="card-body">{{ card.title }}</div>
+        <div class="card-footer d-flex align-items-center justify-content-between">
+          <a class="small text-white stretched-link" href="#">View Details</a>
+          <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <i class="fas fa-table me-1"></i>
+      DataTable Example
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.position }}</td>
+            <td>{{ user.office }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.startDate }}</td>
+            <td>{{ user.salary }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
