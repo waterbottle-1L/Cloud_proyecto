@@ -3,9 +3,9 @@
     <h2>Bienvenido</h2>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <input formControlName="email" type="email" placeholder="Email" />
+        <input formControlName="email" type="email" placeholder="Username" />
         <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid" class="error-msg">
-          Ingresa un email válido
+          Ingresa un usuario válido
         </div>
       </div>
 

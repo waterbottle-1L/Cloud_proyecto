@@ -1,9 +1,9 @@
 package com.SistemaFacturacion.facturacion.controllers;
 
-import com.SistemaFacturacion.facturacion.dtos.CrearProductoDTO;
-import com.SistemaFacturacion.facturacion.dtos.ProductoResponseDTO;
-import com.SistemaFacturacion.facturacion.dtos.ProductoSummaryDTO;
-import com.SistemaFacturacion.facturacion.dtos.UpdateProductoDTO;
+import com.SistemaFacturacion.facturacion.dtos.producto.CrearProductoDTO;
+import com.SistemaFacturacion.facturacion.dtos.producto.ProductoResponseDTO;
+import com.SistemaFacturacion.facturacion.dtos.producto.ProductoSummaryDTO;
+import com.SistemaFacturacion.facturacion.dtos.producto.UpdateProductoDTO;
 import com.SistemaFacturacion.facturacion.services.ProductoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;

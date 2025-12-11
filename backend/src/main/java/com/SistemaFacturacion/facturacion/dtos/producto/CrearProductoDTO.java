@@ -1,4 +1,4 @@
-package com.SistemaFacturacion.facturacion.dtos;
+package com.SistemaFacturacion.facturacion.dtos.producto;
 
 import java.math.BigDecimal;
 

@@ -1,8 +1,8 @@
 package com.SistemaFacturacion.facturacion.entities;
 
 
-import com.SistemaFacturacion.facturacion.dtos.CrearClienteDTO;
-import com.SistemaFacturacion.facturacion.dtos.UpdateClienteDTO;
+import com.SistemaFacturacion.facturacion.dtos.cliente.CrearClienteDTO;
+import com.SistemaFacturacion.facturacion.dtos.cliente.UpdateClienteDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,7 +1,7 @@
 package com.SistemaFacturacion.facturacion.entities;
 
-import com.SistemaFacturacion.facturacion.dtos.CrearUsuarioDTO;
-import com.SistemaFacturacion.facturacion.dtos.UpdateUsuarioDTO;
+import com.SistemaFacturacion.facturacion.dtos.usuario.CrearUsuarioDTO;
+import com.SistemaFacturacion.facturacion.dtos.usuario.UpdateUsuarioDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

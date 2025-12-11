@@ -1,7 +1,7 @@
 package com.SistemaFacturacion.facturacion.controllers;
 
-import com.SistemaFacturacion.facturacion.dtos.LoginRequestDTO;
-import com.SistemaFacturacion.facturacion.dtos.LoginResponseDTO;
+import com.SistemaFacturacion.facturacion.dtos.usuario.LoginRequestDTO;
+import com.SistemaFacturacion.facturacion.dtos.usuario.LoginResponseDTO;
 import com.SistemaFacturacion.facturacion.services.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

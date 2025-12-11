@@ -1,4 +1,9 @@
 package com.SistemaFacturacion.facturacion.dtos.comprobante;
 
-public record ItemComprobanteDTO() {
+import java.math.BigDecimal;
+
+public record ItemComprobanteDTO(
+        Long productoId,
+        Integer cantidad,
+        BigDecimal precioUnitario) {
 }

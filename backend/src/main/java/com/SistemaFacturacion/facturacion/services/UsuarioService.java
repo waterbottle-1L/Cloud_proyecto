@@ -1,9 +1,9 @@
 package com.SistemaFacturacion.facturacion.services;
 
-import com.SistemaFacturacion.facturacion.dtos.CrearUsuarioDTO;
-import com.SistemaFacturacion.facturacion.dtos.UpdateUsuarioDTO;
-import com.SistemaFacturacion.facturacion.dtos.UsuarioResponseDTO;
-import com.SistemaFacturacion.facturacion.dtos.UsuarioSummaryDTO;
+import com.SistemaFacturacion.facturacion.dtos.usuario.CrearUsuarioDTO;
+import com.SistemaFacturacion.facturacion.dtos.usuario.UpdateUsuarioDTO;
+import com.SistemaFacturacion.facturacion.dtos.usuario.UsuarioResponseDTO;
+import com.SistemaFacturacion.facturacion.dtos.usuario.UsuarioSummaryDTO;
 import com.SistemaFacturacion.facturacion.entities.Usuario;
 import com.SistemaFacturacion.facturacion.repositories.UsuarioRepository;
 import com.SistemaFacturacion.facturacion.validators.UsuarioValidator;

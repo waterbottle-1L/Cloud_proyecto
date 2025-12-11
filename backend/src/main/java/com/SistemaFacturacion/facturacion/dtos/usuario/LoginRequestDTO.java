@@ -1,4 +1,4 @@
-package com.SistemaFacturacion.facturacion.dtos;
+package com.SistemaFacturacion.facturacion.dtos.usuario;
 
 public record LoginRequestDTO (String username, String password){
 }

@@ -1,8 +1,10 @@
 package com.SistemaFacturacion.facturacion.services;
 
-import com.SistemaFacturacion.facturacion.dtos.*;
+import com.SistemaFacturacion.facturacion.dtos.producto.CrearProductoDTO;
+import com.SistemaFacturacion.facturacion.dtos.producto.ProductoResponseDTO;
+import com.SistemaFacturacion.facturacion.dtos.producto.ProductoSummaryDTO;
+import com.SistemaFacturacion.facturacion.dtos.producto.UpdateProductoDTO;
 import com.SistemaFacturacion.facturacion.entities.Producto;
-import com.SistemaFacturacion.facturacion.entities.Usuario;
 import com.SistemaFacturacion.facturacion.repositories.ProductoRepository;
 import com.SistemaFacturacion.facturacion.validators.ProductoValidator;
 import jakarta.persistence.EntityNotFoundException;

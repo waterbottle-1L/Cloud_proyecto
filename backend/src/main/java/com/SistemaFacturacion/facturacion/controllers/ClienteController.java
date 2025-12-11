@@ -1,10 +1,9 @@
 package com.SistemaFacturacion.facturacion.controllers;
 
-import com.SistemaFacturacion.facturacion.dtos.ClienteResponseDTO;
-import com.SistemaFacturacion.facturacion.dtos.ClienteSummaryDTO;
-import com.SistemaFacturacion.facturacion.dtos.CrearClienteDTO;
-import com.SistemaFacturacion.facturacion.dtos.UpdateClienteDTO;
-import com.SistemaFacturacion.facturacion.entities.Cliente;
+import com.SistemaFacturacion.facturacion.dtos.cliente.ClienteResponseDTO;
+import com.SistemaFacturacion.facturacion.dtos.cliente.ClienteSummaryDTO;
+import com.SistemaFacturacion.facturacion.dtos.cliente.CrearClienteDTO;
+import com.SistemaFacturacion.facturacion.dtos.cliente.UpdateClienteDTO;
 import com.SistemaFacturacion.facturacion.services.ClienteService;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;

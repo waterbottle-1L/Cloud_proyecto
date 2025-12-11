@@ -1,4 +1,4 @@
-package com.SistemaFacturacion.facturacion.dtos;
+package com.SistemaFacturacion.facturacion.dtos.usuario;
 
 import com.SistemaFacturacion.facturacion.entities.Rol;
 import com.SistemaFacturacion.facturacion.entities.Usuario;

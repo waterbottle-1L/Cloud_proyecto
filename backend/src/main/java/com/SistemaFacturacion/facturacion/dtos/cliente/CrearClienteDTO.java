@@ -1,4 +1,4 @@
-package com.SistemaFacturacion.facturacion.dtos;
+package com.SistemaFacturacion.facturacion.dtos.cliente;
 
 import com.SistemaFacturacion.facturacion.entities.TipoDocumento;
 

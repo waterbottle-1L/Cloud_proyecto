@@ -1,15 +1,17 @@
 package com.SistemaFacturacion.facturacion.entities;
 
-import com.SistemaFacturacion.facturacion.dtos.CrearProductoDTO;
-import com.SistemaFacturacion.facturacion.dtos.UpdateProductoDTO;
+import com.SistemaFacturacion.facturacion.dtos.producto.CrearProductoDTO;
+import com.SistemaFacturacion.facturacion.dtos.producto.UpdateProductoDTO;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
 @Data
+@NoArgsConstructor
 @Entity
-@Table(name = "productos")
+@Table(name = "producto")
 public class Producto {
 
     @Id
