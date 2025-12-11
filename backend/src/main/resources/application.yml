@@ -6,9 +6,9 @@ spring:
      name: facturacion
   datasource:
      driver-class-name: com.mysql.cj.jdbc.Driver
-     url: jdbc:mysql://localhost:3306/facturaciondb
-     username: ${MYSQL_USERNAME}
-     password: ${MYSQL_PASSWORD}
+     url: ${AIVEN_MYSQL_URL}
+     username: ${AIVEN_MYSQL_USERNAME}
+     password: ${AIVEN_MYSQL_PASSWORD}
   jpa:
      hibernate:
         ddl-auto: update
