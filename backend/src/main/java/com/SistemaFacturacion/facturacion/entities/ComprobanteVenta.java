@@ -1,5 +1,6 @@
 package com.SistemaFacturacion.facturacion.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -48,6 +49,7 @@ public class ComprobanteVenta {
     private Usuario usuario;
 
     @OneToMany(mappedBy = "comprobante", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<DetalleComprobante> detalles = new ArrayList<>();
 
     public void addDetalle(DetalleComprobante detalle) {

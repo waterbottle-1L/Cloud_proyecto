@@ -1,5 +1,6 @@
 package com.SistemaFacturacion.facturacion.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,6 +30,7 @@ public class DetalleComprobante {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "comprobante_id")
+    @JsonManagedReference
     private ComprobanteVenta comprobante;
 
     public DetalleComprobante(Producto producto, Integer cantidad, BigDecimal precioUnitario){
